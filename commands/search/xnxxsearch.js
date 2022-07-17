@@ -15,7 +15,7 @@ module.exports = {
             caption += `⭔ Thumb : ${i.thumb}\n`
             caption += `⭔ Url : ${i.url}\n\n`
         }
-        killua.sendFile(m.from, fetch.result[0].thumb, "", m, { caption })
+        killua.sendFile(m.from, fetch.result[0].thumb, "", m, { caption }
     },
     isQuery: true
 }
