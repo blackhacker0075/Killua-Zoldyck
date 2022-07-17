@@ -10,7 +10,7 @@ module.exports = {
     example: "%prefix%command <query>",
     start: async(killua, m, { command, text, prefix }) => {
         if (!text) return m.reply(`Example : ${prefix + command} anime`)
-        let fetch = await fetchUrl(global.api("zenz", "/searching/stickersearch", { query: text }, "apikey"))
+        let fetch = await fetchUrl(global.api("zenz", "/searching/stickersearch", { query: text }, "c6787a891c96"))
         for (let url of fetch.result) {
             await delay(1000)
             killua.sendFile(m.from, url, "", m, { asSticker: true })
